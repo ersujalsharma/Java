@@ -1,0 +1,73 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+public class Calculator implements ActionListener{
+    JJButton one,two,three,four,five,six,seven,eight,nine,zero,add,sub,mul,div,dec,eq;
+    int c,n;
+    String s1,s2,s3,s4,s5;
+    JTextField t;
+    Calculator(){
+        JFrame f = new JFrame("Calculator");
+        JPanel p = new JPanel();
+        f.setLayout(new FlowLayout());
+        f.setBackground(Color.blue);
+        p.setBackground(Color.blue);
+        one = new JButton("1");
+        one.addActionListener(this);
+        two = new JButton("2");
+        two.addActionListener(this);
+        three = new JButton("3");
+        three.addActionListener(this);
+        four = new JButton("4");    
+        four.addActionListener(this);
+        five = new JButton("5");
+        five.addActionListener(this);
+        six = new JButton("6");     
+        six.addActionListener(this);   
+        seven = new JButton("7");  
+        seven.addActionListener(this);      
+        eight = new JButton("8");    
+        eight.addActionListener(this);    
+        nine = new JButton("9");     
+        nine.addActionListener(this);   
+        zero = new JButton("0");    
+        zero.addActionListener(this);            
+        dec = new JButton(".");
+        dec.addActionListener(this);
+        add = new JButton("+");    
+        add.addActionListener(this);    
+        sub = new JButton("-");    
+        sub.addActionListener(this);    
+        mul = new JButton("X");    
+        mul.addActionListener(this);    
+        div = new JButton("/");
+        div.addActionListener(this);
+        eq = new JButton("=");
+        eq.addActionListener(this);
+        p.setLayout(new GridLayout(4,4,5,5));
+        p.add(seven);
+        p.add(eight);
+        p.add(nine);
+        p.add(div);
+        p.add(four);
+        p.add(five);
+        p.add(six);
+        p.add(mul);
+        p.add(one);
+        p.add(two);
+        p.add(three);
+        p.add(sub);
+        p.add(zero);
+        p.add(dec);
+        p.add(add);
+        p.add(eq);
+        t = new JTextField(10);
+        f.add(p);
+        f.setSize(400,400);
+        f.setLayout(null);
+        f.setVisible(true);
+    }   
+    public static void main(String... args){
+        new Calculator();
+    } 
+}
